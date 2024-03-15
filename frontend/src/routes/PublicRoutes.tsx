@@ -3,7 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { checkPathMatch, paths } from './helpers';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
-const ProductDetailsPage = lazy(() => import('../pages/AccountSettingsPage'));
+const ProductDetailsPage = lazy(() => import('../pages/ProductDetailsPage'));
 
 export default function PublicRoutes() {
   const location = useLocation();
