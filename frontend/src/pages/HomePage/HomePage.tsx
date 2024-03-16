@@ -1,15 +1,26 @@
 import { Helmet } from 'react-helmet-async';
+import ProductCard from '../../components/ProductCard';
+import ProductGroup from '../../components/ProductGroup/ProductGroup';
+import testData from '../../store/TestData';
 import { PageWrapper } from '../../styles/global';
 
 function HomePage() {
   return (
-    <PageWrapper>
+    <>
       <Helmet>
         <title>Главная - sMarket</title>
       </Helmet>
 
-      <h1>Home page</h1>
-    </PageWrapper>
+      <PageWrapper>
+        <ProductGroup title='Рекомендуемые'>
+          <>
+            {testData.map(product => (
+              <ProductCard {...product} key={product.id} />
+            ))}
+          </>
+        </ProductGroup>
+      </PageWrapper>
+    </>
   );
 }
 

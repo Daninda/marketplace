@@ -47,4 +47,8 @@ img {
 
 export const PageWrapper = styled.main`
   flex: 1;
+  max-width: 1400px;
+  width: calc(100% - 4rem);
+  align-self: center;
+  margin: 0 2rem;
 `;
