@@ -6,8 +6,8 @@ export const Wrapper = styled.header`
   display: flex;
   align-items: center;
   transition: margin 0.2s ease-out;
-  color: ${theme.color.text};
-  background-color: ${theme.color.surface};
+  color: ${theme.color.dark};
+  background-color: ${theme.color.light};
   box-shadow: ${theme.shadow.primary};
   height: 6rem;
   z-index: 2;

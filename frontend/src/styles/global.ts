@@ -11,8 +11,8 @@ html {
 body {
 	height: 100%;
   margin: 0;
-	color: ${theme.color.text};
-  background-color: ${theme.color.background};
+	color: ${theme.color.primary};
+  background-color: ${theme.color.secondary};
 	font-weight: ${theme.fontWeight.normal};
 	font-size: ${theme.fontSize.normal};
 	font-family: 'Montserrat', sans-serif;
@@ -30,7 +30,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: inherit;
-	color: ${theme.color.text};
+	color: ${theme.color.primary};
 }
 
 ul, li {

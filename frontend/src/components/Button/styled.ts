@@ -6,8 +6,13 @@ export const Wrapper = styled.button`
   border: none;
   cursor: pointer;
   border-radius: ${theme.borderRadius.normal};
-  background-color: ${theme.color.text};
-  color: ${theme.color.background};
+  background-color: ${theme.color.tertiary};
+  color: ${theme.color.light};
   font-size: ${theme.fontSize.normal};
   width: 100%;
+  transition: opacity 0.1s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

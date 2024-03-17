@@ -1,16 +1,24 @@
 export const theme = {
   color: {
-    background: '#F8F1F6',
-    surface: '#ffffff',
-    text: '#181C23',
-    accent: '#27A620',
-    notAccent: '#666a86',
+    primary: '#182039',
+    secondary: '#F0F4F6',
+    tertiary: '#496a81',
+
+    accent: '#25AD67',
+
+    success: '#2dd55b',
+    warning: '#ffc409',
+    danger: '#FE3849',
+
+    light: '#ffffff',
+    medium: '#5f5f5f',
+    dark: '#2f2f2f',
   },
 
   fontSize: {
     large: '2rem',
     normal: '1.6rem',
-    small: '1.4rem',
+    small: '1.2rem',
   },
 
   shadow: {

@@ -1,6 +1,16 @@
 import Button from '../Button/Button';
+import LikeButton from '../LikeButton';
 import Price from '../Price';
-import { Description, Details, Image, ImageWrapper, PriceWrapper, Title, Wrapper } from './styled';
+import {
+  Description,
+  Details,
+  Image,
+  ImageWrapper,
+  PriceWrapper,
+  Seller,
+  Title,
+  Wrapper,
+} from './styled';
 
 type ProductCardProps = {
   id: number;
@@ -10,14 +20,16 @@ type ProductCardProps = {
   priceDiscounted?: number;
   title: string;
   description: string;
+  seller: string;
 };
 
 export default function ProductCard(props: ProductCardProps) {
-  const { imgSrc, priceRegular, priceDiscounted, title, description } = props;
+  const { id, slug, imgSrc, priceRegular, priceDiscounted, title, description, seller } = props;
   return (
     <Wrapper>
+      <LikeButton productId={id} />
       <Details>
-        <ImageWrapper>
+        <ImageWrapper to={`/product/${slug || id}`}>
           <Image src={imgSrc} />
         </ImageWrapper>
         <PriceWrapper>
@@ -25,6 +37,7 @@ export default function ProductCard(props: ProductCardProps) {
         </PriceWrapper>
         <Title>{title}</Title>
         <Description>{description}</Description>
+        <Seller>{seller}</Seller>
       </Details>
       <Button>В корзину</Button>
     </Wrapper>

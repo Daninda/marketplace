@@ -7,24 +7,27 @@ import Header from './features/Header';
 import PrivateRoutes from './routes/PrivateRoutes';
 import PublicRoutes from './routes/PublicRoutes';
 import { theme } from './styles';
-import GlobalStyles from './styles/global';
+import GlobalStyles, { PageWrapper } from './styles/global';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <AppWrapper>
-        <Header />
 
-        <Suspense fallback={'loading...'}>
-          <HelmetProvider>
-            <PublicRoutes />
-            <PrivateRoutes />
-          </HelmetProvider>
-        </Suspense>
+      <HelmetProvider>
+        <AppWrapper>
+          <Header />
 
-        <Footer />
-      </AppWrapper>
+          <PageWrapper>
+            <Suspense fallback={<div></div>}>
+              <PublicRoutes />
+              <PrivateRoutes />
+            </Suspense>
+          </PageWrapper>
+
+          <Footer />
+        </AppWrapper>
+      </HelmetProvider>
     </ThemeProvider>
   );
 }

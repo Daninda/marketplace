@@ -6,6 +6,7 @@ interface ITestData {
   priceDiscounted?: number;
   title: string;
   description: string;
+  seller: string;
 }
 
 const testData: ITestData[] = [
@@ -17,6 +18,7 @@ const testData: ITestData[] = [
     priceDiscounted: 9000,
     title: 'Телевизор',
     description: 'Вот такой вот',
+    seller: 'Some shop',
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ const testData: ITestData[] = [
     priceDiscounted: 9000,
     title: 'Телевизор',
     description: 'Вот такой  spdlfsld;flsd;f ; ; ; k k fkds kk ',
+    seller: 'Some shop',
   },
   {
     id: 3,
@@ -34,30 +37,31 @@ const testData: ITestData[] = [
     priceRegular: 10000,
     title: 'Телевизор',
     description: 'Вот такой вот',
+    seller: 'Some shop',
   },
   {
     id: 4,
-    slug: 'third',
     imgSrc: 'https://avatars.mds.yandex.net/get-mpic/1924204/img_id5335194020855380889.png/600x800',
     priceRegular: 10000,
     title: 'Телевизор',
     description: 'Вот такой вот',
+    seller: 'Some shop',
   },
   {
     id: 5,
-    slug: 'third',
     imgSrc: 'https://avatars.mds.yandex.net/get-mpic/1924204/img_id5335194020855380889.png/600x800',
     priceRegular: 10000,
     title: 'Телевизор',
     description: 'Вот такой вот',
+    seller: 'Some shop',
   },
   {
     id: 6,
-    slug: 'third',
     imgSrc: 'https://avatars.mds.yandex.net/get-mpic/1924204/img_id5335194020855380889.png/600x800',
     priceRegular: 10000,
     title: 'Телевизор',
     description: 'Вот такой вот',
+    seller: 'Some shop',
   },
 ];
 

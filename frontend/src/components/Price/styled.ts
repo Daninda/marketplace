@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const PriceDiscounted = styled.p`
   font-size: ${theme.fontSize.large};
   font-weight: ${theme.fontWeight.bold};
-  color: ${theme.color.accent};
+  color: ${theme.color.danger};
 `;
 
 export const PriceRegular = styled.p`
@@ -22,5 +22,6 @@ export const PriceRegular = styled.p`
 
 export const PriceRegularIfDiscounted = styled.p`
   font-size: ${theme.fontSize.normal};
+  color: ${theme.color.medium};
   text-decoration: line-through;
 `;
