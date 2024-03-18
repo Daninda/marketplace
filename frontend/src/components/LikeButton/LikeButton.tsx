@@ -1,14 +1,12 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { HiHeart, HiOutlineHeart } from 'react-icons/hi2';
 import { Wrapper } from './styled';
 
-type LikeButtonProps = {
-  productId: number;
-};
+interface LikeButtonProps {
+  productId?: number;
+}
 
-export default function LikeButton(props: LikeButtonProps) {
-  const { productId } = props;
-  console.log(productId);
+const LikeButton: FC<LikeButtonProps> = () => {
   const [isLiked, setLiked] = useState(false);
 
   return (
@@ -16,4 +14,6 @@ export default function LikeButton(props: LikeButtonProps) {
       {isLiked ? <HiHeart size={'22px'} /> : <HiOutlineHeart size={'22px'} />}
     </Wrapper>
   );
-}
+};
+
+export default LikeButton;

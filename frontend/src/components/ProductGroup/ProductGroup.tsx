@@ -1,18 +1,18 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { Title, Wrapper } from './styled';
 
-type ProductGroupProps = {
+interface ProductGroupProps {
   title: string;
   children: ReactNode;
-};
+}
 
-export default function ProductGroup(props: ProductGroupProps) {
-  const { title, children } = props;
-
+const ProductGroup: FC<ProductGroupProps> = ({ title, children }) => {
   return (
     <section>
       <Title>{title}</Title>
       <Wrapper>{children}</Wrapper>
     </section>
   );
-}
+};
+
+export default ProductGroup;

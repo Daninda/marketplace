@@ -1,5 +1,8 @@
+import { FC } from 'react';
 import { Wrapper } from './styled';
 
-export default function Footer() {
+const Footer: FC = () => {
   return <Wrapper>Footer</Wrapper>;
-}
+};
+
+export default Footer;

@@ -1,13 +1,12 @@
+import { FC } from 'react';
 import { PriceDiscounted, PriceRegular, PriceRegularIfDiscounted, Wrapper } from './styled';
 
-type PriceProps = {
+interface PriceProps {
   priceRegular: number;
   priceDiscounted?: number;
-};
+}
 
-export default function Price(props: PriceProps) {
-  const { priceRegular, priceDiscounted } = props;
-
+const Price: FC<PriceProps> = ({ priceRegular, priceDiscounted }) => {
   return (
     <Wrapper>
       {priceDiscounted ? (
@@ -38,4 +37,6 @@ export default function Price(props: PriceProps) {
       )}
     </Wrapper>
   );
-}
+};
+
+export default Price;

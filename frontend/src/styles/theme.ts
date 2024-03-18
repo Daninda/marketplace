@@ -41,4 +41,8 @@ export const theme = {
     large: '(min-width: 1024px)',
     medium: '(min-width: 768px)',
   },
+
+  transitionValue: {
+    opacity: '0.8',
+  },
 };

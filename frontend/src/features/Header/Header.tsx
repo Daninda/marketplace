@@ -1,5 +1,8 @@
+import { FC } from 'react';
 import { Wrapper } from './styled';
 
-export default function Header() {
+const Header: FC = () => {
   return <Wrapper>Header</Wrapper>;
-}
+};
+
+export default Header;

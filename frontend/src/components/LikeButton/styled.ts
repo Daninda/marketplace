@@ -13,7 +13,7 @@ export const Wrapper = styled.button`
   transition: opacity 0.1s ease, transform 0.05s ease;
 
   &:hover {
-    opacity: 0.7;
+    opacity: ${theme.transitionValue.opacity};
   }
 
   &:active {

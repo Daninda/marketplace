@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-function ProductDetailsPage() {
+const ProductDetailsPage: FC = () => {
   return (
     <>
       <Helmet>
@@ -10,6 +11,6 @@ function ProductDetailsPage() {
       <h1>Product details page</h1>
     </>
   );
-}
+};
 
 export default ProductDetailsPage;

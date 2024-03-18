@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ProductCard from '../../components/ProductCard';
 import ProductGroup from '../../components/ProductGroup/ProductGroup';
 import testData from '../../store/TestData';
 
-function HomePage() {
+const HomePage: FC = () => {
   return (
     <>
       <Helmet>
@@ -19,6 +20,6 @@ function HomePage() {
       </ProductGroup>
     </>
   );
-}
+};
 
 export default HomePage;

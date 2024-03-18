@@ -1,10 +1,10 @@
-import { lazy } from 'react';
+import { FC, lazy } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { checkPathMatch, paths } from './helpers';
 
 const AccountSettingsPage = lazy(() => import('../pages/AccountSettingsPage'));
 
-export default function PublicRoutes() {
+const PrivateRoutes: FC = () => {
   const location = useLocation();
 
   const isMatch = checkPathMatch(location.pathname, paths);
@@ -15,4 +15,6 @@ export default function PublicRoutes() {
       <Route path='*' element={!isMatch ? <Navigate to={paths.home} /> : null} />
     </Routes>
   );
-}
+};
+
+export default PrivateRoutes;

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Button from '../Button/Button';
 import LikeButton from '../LikeButton';
 import Price from '../Price';
@@ -12,7 +13,7 @@ import {
   Wrapper,
 } from './styled';
 
-type ProductCardProps = {
+interface ProductCardProps {
   id: number;
   slug?: string;
   imgSrc: string;
@@ -21,10 +22,18 @@ type ProductCardProps = {
   title: string;
   description: string;
   seller: string;
-};
+}
 
-export default function ProductCard(props: ProductCardProps) {
-  const { id, slug, imgSrc, priceRegular, priceDiscounted, title, description, seller } = props;
+const ProductCard: FC<ProductCardProps> = ({
+  id,
+  slug,
+  imgSrc,
+  priceRegular,
+  priceDiscounted,
+  title,
+  description,
+  seller,
+}) => {
   return (
     <Wrapper>
       <LikeButton productId={id} />
@@ -42,4 +51,6 @@ export default function ProductCard(props: ProductCardProps) {
       <Button>В корзину</Button>
     </Wrapper>
   );
-}
+};
+
+export default ProductCard;
