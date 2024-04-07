@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
-import { HiHeart, HiOutlineHeart } from 'react-icons/hi2';
+import { HiHeart, HiOutlineHeart } from 'react-icons/hi';
 import { Wrapper } from './styled';
 
-interface LikeButtonProps {
+interface ILikeButtonProps {
   productId?: number;
 }
 
-const LikeButton: FC<LikeButtonProps> = () => {
+const LikeButton: FC<ILikeButtonProps> = () => {
   const [isLiked, setLiked] = useState(false);
 
   return (

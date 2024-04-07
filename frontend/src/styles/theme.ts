@@ -2,7 +2,7 @@ export const theme = {
   color: {
     primary: '#182039',
     secondary: '#F0F4F6',
-    tertiary: '#496a81',
+    tertiary: '#004C9A',
 
     accent: '#25AD67',
 
@@ -32,7 +32,7 @@ export const theme = {
   },
 
   borderRadius: {
-    normal: '1rem',
+    normal: '0.5rem',
     full: '9999rem',
   },
 

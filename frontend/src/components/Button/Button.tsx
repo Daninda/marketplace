@@ -1,16 +1,18 @@
 import { FC, MouseEvent, ReactNode } from 'react';
 import { Wrapper } from './styled';
 
-export interface ButtonProps {
+export interface IButtonProps {
   children: ReactNode;
-  $variant?: 'primary' | 'secondary';
+  icon?: ReactNode;
+  $variant?: 'primary' | 'secondary' | 'tertiary';
   $block?: boolean;
   $disabled?: boolean;
   onClick?: (e: MouseEvent<HTMLElement>) => void;
 }
 
-const Button: FC<ButtonProps> = ({
+const Button: FC<IButtonProps> = ({
   children,
+  icon,
   $variant = 'primary',
   $block = true,
   $disabled = false,
@@ -26,6 +28,7 @@ const Button: FC<ButtonProps> = ({
       $block={$block}
       $disabled={$disabled}
     >
+      {icon}
       {children}
     </Wrapper>
   );

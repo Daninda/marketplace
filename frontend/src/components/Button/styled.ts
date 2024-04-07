@@ -1,18 +1,30 @@
 import styled from 'styled-components';
 import { theme } from '../../styles';
-import { ButtonProps } from './Button';
+import { IButtonProps } from './Button';
 
-type StyleProps = Omit<ButtonProps, 'onClick' | 'children'>;
+type StyleProps = Omit<IButtonProps, 'onClick' | 'children'>;
 
 export const Wrapper = styled.button<StyleProps>`
-  padding: 1rem 2rem;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  padding: ${({ $variant }) => {
+    switch ($variant) {
+      case 'tertiary':
+        return '1rem 1rem';
+      case 'primary':
+      case 'secondary':
+        return '1rem 2rem';
+    }
+  }};
   cursor: ${({ $disabled }) => (!$disabled ? 'pointer' : 'not-allowed')};
   width: ${({ $block }) => (!$block ? 'fit-content' : '100%')};
 
   border: ${({ $variant }) => {
     switch ($variant) {
       case 'primary':
+      case 'tertiary':
         return '2px solid transparent';
       case 'secondary':
         return `2px solid ${theme.color.tertiary}`;
@@ -26,6 +38,8 @@ export const Wrapper = styled.button<StyleProps>`
         return theme.color.tertiary;
       case 'secondary':
         return theme.color.secondary;
+      case 'tertiary':
+        return 'transparent';
     }
   }};
   color: ${({ $variant }) => {

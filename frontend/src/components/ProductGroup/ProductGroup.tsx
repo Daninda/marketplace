@@ -1,12 +1,12 @@
 import { FC, ReactNode } from 'react';
 import { Title, Wrapper } from './styled';
 
-interface ProductGroupProps {
+interface IProductGroupProps {
   title: string;
   children: ReactNode;
 }
 
-const ProductGroup: FC<ProductGroupProps> = ({ title, children }) => {
+const ProductGroup: FC<IProductGroupProps> = ({ title, children }) => {
   return (
     <section>
       <Title>{title}</Title>

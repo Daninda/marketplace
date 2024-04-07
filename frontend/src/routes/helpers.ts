@@ -1,13 +1,13 @@
-export const pathsPublic: { [key: string]: string } = {
+export const pathsPublic = {
   home: '/',
   productDetails: '/product/:idOrSlug',
 };
 
-export const pathsPrivate: { [key: string]: string } = {
+export const pathsPrivate = {
   accountSettings: '/account-settings',
 };
 
-export const paths: { [key: string]: string } = Object.assign({}, pathsPublic, pathsPrivate);
+export const paths = { ...pathsPublic, ...pathsPrivate };
 
 export function checkPathMatch(pathname: string, paths: { [key: string]: string }) {
   const allPaths = Object.values(paths);

@@ -1,7 +1,7 @@
+import Button from '@components/Button/Button';
+import LikeButton from '@components/LikeButton';
+import Price from '@components/Price';
 import { FC } from 'react';
-import Button from '../Button/Button';
-import LikeButton from '../LikeButton';
-import Price from '../Price';
 import {
   Description,
   Details,
@@ -13,7 +13,7 @@ import {
   Wrapper,
 } from './styled';
 
-interface ProductCardProps {
+interface IProductCardProps {
   id: number;
   slug?: string;
   imgSrc: string;
@@ -24,7 +24,7 @@ interface ProductCardProps {
   seller: string;
 }
 
-const ProductCard: FC<ProductCardProps> = ({
+const ProductCard: FC<IProductCardProps> = ({
   id,
   slug,
   imgSrc,

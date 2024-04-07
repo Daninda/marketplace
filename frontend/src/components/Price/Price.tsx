@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { PriceDiscounted, PriceRegular, PriceRegularIfDiscounted, Wrapper } from './styled';
 
-interface PriceProps {
+interface IPriceProps {
   priceRegular: number;
   priceDiscounted?: number;
 }
 
-const Price: FC<PriceProps> = ({ priceRegular, priceDiscounted }) => {
+const Price: FC<IPriceProps> = ({ priceRegular, priceDiscounted }) => {
   return (
     <Wrapper>
       {priceDiscounted ? (
